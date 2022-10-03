@@ -47,46 +47,46 @@ return (
 
 export default Home;
 
-// export async function getServerSideProps(context){
-//   const query = context.query.query;
-//   if (query){
-//     const options = {
-//       method: 'GET',
-//       url: 'https://youtube-search-and-download.p.rapidapi.com/search',
-//       params: {
-//         query: query,
-//         hl: 'en',
-//         type: 'v'
-//       },
-//       headers: {
-//         'X-RapidAPI-Key': process.env.NEXT_APP_API_KEY,
-//         'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com'
-//       }
-//       };
-//       const response = await axios.request(options);
+export async function getServerSideProps(context){
+  const query = context.query.query;
+  if (query){
+    const options = {
+      method: 'GET',
+      url: 'https://youtube-search-and-download.p.rapidapi.com/search',
+      params: {
+        query: query,
+        hl: 'en',
+        type: 'v'
+      },
+      headers: {
+        'X-RapidAPI-Key': process.env.NEXT_APP_API_KEY,
+        'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com'
+      }
+      };
+      const response = await axios.request(options);
 
-//       return {
-//         props: {
-//           data: response.data.contents
-//         }
-//       }
-//   }else{
-//     const options = {
-//     method: 'GET',
-//     url: 'https://youtube-search-and-download.p.rapidapi.com/trending',
-//     params: { hl: 'en'},
-//     headers: {
-//       'X-RapidAPI-Key': process.env.NEXT_APP_API_KEY,
-//       'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com'
-//     }
-//     };
-//     const response = await axios.request(options);
+      return {
+        props: {
+          data: response.data.contents
+        }
+      }
+  }else{
+    const options = {
+    method: 'GET',
+    url: 'https://youtube-search-and-download.p.rapidapi.com/trending',
+    params: { hl: 'en'},
+    headers: {
+      'X-RapidAPI-Key': process.env.NEXT_APP_API_KEY,
+      'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com'
+    }
+    };
+    const response = await axios.request(options);
 
-//     return {
-//       props: {
-//         data: response.data.contents
-//       }
-//     }
+    return {
+      props: {
+        data: response.data.contents
+      }
+    }
 
-//   }
-// }
+  }
+}
