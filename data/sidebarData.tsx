@@ -3,69 +3,69 @@ import { BsHouse, BsCompass, BsController, BsFilm, BsClockHistory, BsCollectionP
 export const Items = [
   {
     name: 'Home',
-    icon: <BsHouse size={25} />
+    icon: <BsHouse size={25} style={{background:'transparent'}} />
   },
   {
     name: 'Explore',
-    icon: <BsCompass size={25} />,
+    icon: <BsCompass size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Trending',
-    icon: <BsGraphUp size={25} />,
+    icon: <BsGraphUp size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Subscription',
-    icon: <BsCollectionPlay size={25} />,
+    icon: <BsCollectionPlay size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Gaming',
-    icon: <BsController size={25} />,
+    icon: <BsController size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Films',
-    icon: <BsFilm size={25} />,
+    icon: <BsFilm size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'History',
-    icon: <BsClockHistory size={25} />,
+    icon: <BsClockHistory size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Likes',
-    icon: <BsHandThumbsUp size={25} />,
+    icon: <BsHandThumbsUp size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Learning',
-    icon: <BsLightbulb size={25} />,
+    icon: <BsLightbulb size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Sports',
-    icon: <BsTrophy size={25} />,
+    icon: <BsTrophy size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Music',
-    icon: <BsMusicPlayer size={25} />,
+    icon: <BsMusicPlayer size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Settings',
-    icon: <BsGear size={25} />,
+    icon: <BsGear size={25} style={{background:'transparent'}} />,
   },
 ]
 
 export const MobileItems = [
   {
     name: 'Home',
-    icon: <BsHouse size={25} />
+    icon: <BsHouse size={25} style={{background:'transparent'}} />
   },
   {
     name: 'Trending',
-    icon: <BsGraphUp size={25} />,
+    icon: <BsGraphUp size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Subscription',
-    icon: <BsCollectionPlay size={25} />,
+    icon: <BsCollectionPlay size={25} style={{background:'transparent'}} />,
   },
   {
     name: 'Library',
-    icon: <BsClockHistory size={25} />,
+    icon: <BsClockHistory size={25} style={{background:'transparent'}} />,
   },
 ]

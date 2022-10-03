@@ -32,7 +32,7 @@ export const Header: React.FC<Itoogle> = ({toggleSidebar}) => {
       
       <div className='flex items-center justify-center bg-transparent'>
       <div className='relative flex items-center justify-center '>
-        <input type='text' placeholder='Search' className='rounded-lg lg:bg-gray-200 bg-white focus:outline-none  lg:w-[35rem] lg:w-[20rem] w-full py-2 px-4' 
+        <input type='text' placeholder='Search' className='rounded-lg lg:bg-gray-200 bg-white focus:outline-none  lg:w-[35rem] w-full py-2 px-4' 
         value={inputValue}
         onChange={(e) => {setInputValue(e.target.value)}}
         onKeyDown={(e) => {
