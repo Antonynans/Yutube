@@ -6,7 +6,6 @@ import { Sidebar } from '../components/sidebar';
 import { Body } from '../components/body';
 import { BsYoutube } from 'react-icons/bs';
 import axios from 'axios';
-import { Navbar } from '../components/navbar';
 
 interface IHome {
   isOpen: IOpen

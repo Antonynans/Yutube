@@ -10,7 +10,6 @@ interface Itoogle {
 
 export const Header: React.FC<Itoogle> = ({toggleSidebar}) => {
   const [inputValue, setInputValue] = useState('');
-  const [notification, setNotification] = useState(1);
 
   const router = useRouter();
 
@@ -53,7 +52,7 @@ export const Header: React.FC<Itoogle> = ({toggleSidebar}) => {
         <BsCameraVideo className='text-3xl bg-white cursor-pointer hidden lg:block' />
         <div className='cursor-pointer relative hidden lg:block '>
           <BsBell className='text-3xl bg-white' />
-          <span className='absolute -top-3 -right-1 bg-red-600 p-3 w-4 h-4 text-center flex items-center justify-center rounded-full text-xs text-white'>{notification}</span>
+          <span className='absolute -top-3 -right-1 bg-red-600 p-3 w-4 h-4 text-center flex items-center justify-center rounded-full text-xs text-white'>2</span>
         </div>
         <div className='rounded-full w-10 h-10 flex items-center justify-center cursor-pointer'>AN</div>
       </div>

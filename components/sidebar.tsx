@@ -4,7 +4,6 @@ import { IOpen } from "../models/isOpen";
 export const Sidebar: React.FC<IOpen> = ({isOpen}) => {
   return (
     <>
-    {/* <div> */}
       <div className="lg:flex flex-col justify-between z-10 shadow-sm hidden">
         <ul className="flex flex-col fixed h-full overflow-y-scroll bg-white pb-20">
           {Items?.map((item, index) => {
@@ -28,16 +27,7 @@ export const Sidebar: React.FC<IOpen> = ({isOpen}) => {
             )
           })}
         </ul>
-           {/* <footer>
-            <ul>
-              <li>About</li>
-              <li>Press</li>
-              <li>Copyright</li>
-            </ul>
-          </footer> */}
-      </div>
-     
-          {/* </div> */}
+      </div>     
     </>
   )
 };
