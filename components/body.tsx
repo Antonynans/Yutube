@@ -7,9 +7,10 @@ interface IBody {
 
 export const Body: React.FC<IBody> = ({data}) => {
   return (
-    <div className="col-span-6 relative min-h-screen z-0">
-      <div className="ml-4 lg:ml-20">
+    <div className="relative min-h-screen z-0 lg:ml-52 lg:pt-0 pt-5">
+      <div className="">
         <Navbar />
+        
         <VideoPlayer data={data} />
       </div>
     </div>

@@ -17,26 +17,26 @@ export const VideoPlayer: React.FC<IData> = ({data}) => {
   }, []);
 
   return (
-    <div className='flex flex-wrap gap-5 items-center justify-center my-10'>
+    <div className='flex flex-wrap gap-5 items-center justify-center lg:my-10 mb-24 mt-16 w-full'>
       {data?.map((item, index) => {
         return (
-          <div key={index} className='flex flex-col items-center ml-10 md:ml-0'>
-            <div className='relative'>
+          <div key={index} className='flex flex-col items-center lg:w-auto w-full'>
+            <div className='relative min-w-fit'>
               {loading ? (
                 <>
-                  <ReactPlayer url={`https://www.youtube.com/watch?v=${item?item.video.videoId: 'Ux_LFXpOrd4'}`} light height={220} width={380} />
+                  <ReactPlayer url={`https://www.youtube.com/watch?v=${item?item.video.videoId: 'Ux_LFXpOrd4'}`} light height={220} width={350} />
                   <span className='absolute bottom-2 right-3 bg-black text-white p-0.5'>{item.video.lengthText}</span>
                 </>
               ) : 
-              <Skeleton height={220} width={380} />
+              <Skeleton height={220} width={350} />
               }
             </div>
 
-            <div className='flex mt-4 ml-1'>
+            <div className='flex mt-4 ml-1 w-full'>
               <img src='/youtube.jpg' alt='logo' className='rounded-full mr-3 w-10 h-10 object-cover' />
 
-              <div>
-              <div className='flex justify-between w-80 m-1'>
+              <div className='w-full'>
+              <div className='flex justify-between lg:w-[20rem] m-1'>
                 <h2 className='text-xl font-bold'>{item? item.video.title.length > 45? `${item.video.title.slice(0, 45)}...`: item.video.title:<Skeleton />}
               </h2>
               <div className='rounded-full h-10 w-10 text-center flex items-center justify-center transition-all hover:bg-gray-100'><BsThreeDots size={20} className='rotate-90' /></div>

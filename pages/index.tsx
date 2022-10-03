@@ -6,6 +6,7 @@ import { Sidebar } from '../components/sidebar';
 import { Body } from '../components/body';
 import { BsYoutube } from 'react-icons/bs';
 import axios from 'axios';
+import { Navbar } from '../components/navbar';
 
 interface IHome {
   isOpen: IOpen
@@ -29,10 +30,11 @@ return (
       <main>
         <div className={mounted ? `block` : `hidden`}>
           <Header toggleSidebar={toggleSidebar} />
-          <div className="lg:grid grid-cols-7 lg:mt-20">
+          <div className="lg:flex lg:mt-16">
             <Sidebar isOpen={isOpen}  />
-            <Body data={data} />
           </div>
+          <Body data={data} />
+
         </div>
         <div className={mounted ? `hidden`: `grid place-items-center min-h-screen text-red-500`}>
           <BsYoutube size={115} />

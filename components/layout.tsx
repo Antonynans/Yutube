@@ -26,7 +26,7 @@ export const Layout: React.FC<IProps> = ({children, toggleSidebar, isOpen, data}
       <main>
         <div className={mounted ? `block` : `hidden`}>
           <Header toggleSidebar={toggleSidebar} />
-          <div className="lg:grid grid-cols-7 lg:mt-20">
+          <div className="lg:grid grid-cols-7 lg:mt-16">
             <Sidebar isOpen={isOpen}  />
             <Body data={data} />
             {/* <Navbar /> */}
