@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { BsDot, BsThreeDots } from 'react-icons/bs';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import ReactPlayer from 'react-player/lazy';
+import youtubeImg from '../public/youtube.jpg';
 
 interface IData {
   data: any
@@ -33,8 +35,9 @@ export const VideoPlayer: React.FC<IData> = ({data}) => {
             </div>
 
             <div className='flex mt-4 ml-1 w-full'>
-              <img src='/youtube.jpg' alt='logo' className='rounded-full mr-3 w-10 h-10 object-cover' />
-
+              <div className='rounded-full mr-3 w-10 h-10 object-cover'>
+              <Image src={youtubeImg} alt='logo' />
+</div>
               <div className='w-full'>
               <div className='flex justify-between lg:w-[20rem] m-1'>
                 <h2 className='text-xl font-bold'>{item? item.video.title.length > 45? `${item.video.title.slice(0, 45)}...`: item.video.title:<Skeleton />}

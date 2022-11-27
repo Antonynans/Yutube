@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import type { NextPage } from 'next';
-import { IOpen } from '../models/isOpen';
 import { Header } from '../components/header';
 import { Sidebar } from '../components/sidebar';
 import { Body } from '../components/body';
@@ -9,9 +8,9 @@ import axios from 'axios';
 import { SEO } from '../components/seo';
 
 interface IHome {
-  isOpen: IOpen
+  // isOpen: IOpen
   toggleSidebar: any
-  data: any
+  data: any,
 }
 
 const Home: NextPage<IHome> = ({data}) => {
@@ -32,7 +31,7 @@ return (
         <div className={mounted ? `block` : `hidden`}>
           <Header toggleSidebar={toggleSidebar} />
           <div className="lg:flex lg:mt-16">
-            <Sidebar isOpen={isOpen}  />
+            <Sidebar isOpen={isOpen} />
           </div>
           <Body data={data} isOpen={isOpen} />
 

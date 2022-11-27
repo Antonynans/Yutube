@@ -21,11 +21,11 @@ export const Header: React.FC<Itoogle> = ({toggleSidebar}) => {
         <FaBars className='cursor-pointer w-10 h-10 p-2 lg:block hidden' />
         <div className=''>
       <Link href='/'>
-        <a className='cursor-pointer flex items-center bg-white pt-5 pb-2 lg:pl-6 text-2xl font-bold tracking-tighter relative'>
+        <div className='cursor-pointer flex items-center bg-white pt-5 pb-2 lg:pl-6 text-2xl font-bold tracking-tighter relative'>
         <BsYoutube className='text-4xl text-red-600 bg-white' />
         YuTube
         <span className='bg-white opacity-50 text-[12px] absolute -right-2 top-4 leading-tight'>NG</span>
-        </a>
+        </div>
         </Link>
       </div>
       </div>
