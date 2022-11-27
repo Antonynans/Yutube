@@ -19,10 +19,10 @@ export const VideoPlayer: React.FC<IData> = ({data}) => {
   }, []);
 
   return (
-    <div className='flex flex-wrap gap-5 items-center justify-center lg:my-10 mb-24 mt-16 w-full'>
+    <div className='flex flex-wrap gap-x-2 gap-y-4 px-4 items-center justify-start lg:my-10 mb-24 mt-16 w-full'>
       {data?.map((item, index) => {
         return (
-          <div key={index} className='flex flex-col items-center lg:w-auto w-full'>
+          <div key={index} className='flex flex-col lg:h-[350px] items-center lg:w-auto w-full lg:shadow-3xl hover:opacity-80'>
             <div className='relative min-w-fit'>
               {loading ? (
                 <>
@@ -34,7 +34,7 @@ export const VideoPlayer: React.FC<IData> = ({data}) => {
               }
             </div>
 
-            <div className='flex mt-4 ml-1 w-full'>
+            <div className='flex mt-4 lg:ml-0 ml-1 w-full'>
               <div className='rounded-full mr-3 w-10 h-10 object-cover'>
               <Image src={youtubeImg} alt='logo' />
 </div>
